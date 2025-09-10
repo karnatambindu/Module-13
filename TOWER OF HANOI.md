@@ -1,4 +1,4 @@
-# Exp.No:35  
+# Exp.No:13E 
 ## TOWER OF HANOI
 
 ---
@@ -32,13 +32,20 @@ Consider the names of the tower pegs as A, B, C. Get the number of disks value f
 ### PROGRAM  
 
 ```
+def TowerOfHanoi(n, source, destination, auxiliary):
+    if (n > 0):
+        TowerOfHanoi(n-1, source, auxiliary, destination)   # Step 1: move n-1 disks
+        print("Move disk from", source, "to", destination)  # Step 2: move the nth disk
+        TowerOfHanoi(n-1, auxiliary, destination, source)   # Step 3: move n-1 disks
 
+n = int(input())
+print("No. of disks =", n)
 
 ```
 
 ### OUTPUT
-
+<img width="968" height="933" alt="image" src="https://github.com/user-attachments/assets/910433d9-daa1-4e83-9f54-adbc8ef82df7" />
 
 
 ### RESULT
-
+Thus the program to implement Tower of Hanoi has been implemented and executed successfully.
