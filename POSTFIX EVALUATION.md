@@ -1,4 +1,4 @@
-# Exp.No:33  
+# Exp.No:13C  
 ## POSTFIX EVALUATION
 
 ---
@@ -32,12 +32,36 @@ To write a Python program to evaluate a user-given Postfix expression that conta
 ### PROGRAM
 
 ```
+OPERATORS=set(['*','+']) 
 
+
+def evaluate_postfix(expression):
+    stack=[] 
+    for i in expression:
+        if i not in OPERATORS:
+            stack.append(i)  
+        
+        else:
+            a=stack.pop()  
+            b=stack.pop()
+        
+            if i=='+':
+                res=int(b)+int(a)  
+            elif i=='*':
+                res=int(b)*int(a)
+            
+            stack.append(res) 
+    return stack[0]
+
+expression = input()
+print('postfix expression: ',expression)
+print('Evaluation result: ',evaluate_postfix(expression))
 
 ```
 
 ### OUTPUT
+<img width="1200" height="226" alt="image" src="https://github.com/user-attachments/assets/425c4629-cfac-4608-a961-f55ea24581a5" />
 
 
 ### RESULT
-
+Thus the program to evaluate a user-given Postfix expression has been implemented and executed succesfully.
