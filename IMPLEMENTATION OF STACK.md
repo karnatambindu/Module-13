@@ -1,4 +1,4 @@
-# Exp.No:31  
+# Exp.No:13B
 ## IMPLEMENTATION OF STACK
 
 ---
@@ -25,7 +25,40 @@ To write a Python program to implement a stack using a list and its built-in met
 ---
 
 ### PROGRAM
+```
+`stack = []
+class st:
+    def push(self,L):
+        for i in L:
+            stack.append(i)
+        return
+    
+    # Write your code here
+
+    def pop(self):
+        if stack:
+            print("Element popped : ",stack.pop())
+        else:
+            print("empty")
+    
+    # Write your code here
+   
+    def peek(self):
+        print("Elements in the stack\n",stack)
+    
+    # Write your code here
+s=st()
+a=int(input())
+l=[i for i in range(1,a) if i%2!=0]
+s.push(l)
+s.peek()
+s.pop()
+s.peek()``
+
 
 ```
+# OUTPUT
+<img width="1213" height="286" alt="image" src="https://github.com/user-attachments/assets/c7fedd3d-9e12-401f-816e-1e09ac81d65d" />
 
-```
+# RESULT
+Thus the program to implement a stack using a list and its built-in methods has been implemented and executed successfully.
